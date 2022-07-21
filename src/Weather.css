@@ -1,0 +1,19 @@
+.Weather {
+  border: 1px solid #91b3df;
+}
+.date {
+  text-align: center;
+  font-size: 17px;
+}
+
+.cityResult {
+  text-align: center;
+  font-size: 35px;
+  color: #91b3df;
+}
+
+h2 {
+  text-align: center;
+  font-size: 65px;
+  color: #91b3df;
+}
