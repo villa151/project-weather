@@ -25,19 +25,19 @@ export default function Weather() {
       <h2>35°C</h2>
       <br />
       <div className="row">
-        <div className="col-4">
+        <div className="col-5">
           <ul>
             <li>Humidity: 80%</li>
             <li>Feels like: 40°</li>
           </ul>
         </div>
-        <div className="col-4">
+        <div className="col-2">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
             alt="cloudy"
           />
         </div>
-        <div className="col-4">
+        <div className="col-5">
           <ul>
             <li>Wind Speed: 10m/s</li>
             <li>Prescipitation: 15%</li>

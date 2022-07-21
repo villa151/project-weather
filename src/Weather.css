@@ -1,19 +1,41 @@
 .Weather {
   border: 1px solid #91b3df;
+  margin-top: 30px;
+  padding: 15px 15px;
 }
 .date {
   text-align: center;
-  font-size: 17px;
+  font-size: 15px;
+  color: rgb(152, 152, 152);
 }
 
 .cityResult {
   text-align: center;
-  font-size: 35px;
+  font-size: 37px;
   color: #91b3df;
+  line-height: 23px;
 }
 
 h2 {
   text-align: center;
-  font-size: 65px;
+  font-size: 95px;
   color: #91b3df;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: rgb(152, 152, 152);
+  list-style: none;
+  line-height: 19px;
+  font-size: 15px;
+}
+
+footer {
+  text-align: center;
+  color: rgb(152, 152, 152);
+  font-size: x-small;
 }
