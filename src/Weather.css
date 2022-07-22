@@ -1,8 +1,11 @@
 .Weather {
   border: 1px solid #91b3df;
-  margin-top: 30px;
+  border-radius: 3px;
+  margin: 30px auto;
   padding: 15px 15px;
+  max-width: 400px;
 }
+
 .date {
   text-align: center;
   font-size: 15px;
@@ -13,17 +16,31 @@
   text-align: center;
   font-size: 37px;
   color: #91b3df;
-  line-height: 23px;
+  line-height: 26px;
 }
 
 h2 {
   text-align: center;
   font-size: 95px;
   color: #91b3df;
+  font-weight: bold;
+  display: inline-flex;
+  padding-bottom: 10px;
+  padding-left: 112px;
+}
+
+.Weather .unit {
+  color: #91b3df;
+  font-weight: bold;
+  display: inline;
+  font-size: 25px;
+  position: relative;
+  top: -45px;
+  line-height: 1;
 }
 
 ul {
-  margin: 0;
+  margin: 20px 0 0 0;
   padding: 0;
 }
 
@@ -34,8 +51,9 @@ li {
   font-size: 15px;
 }
 
-footer {
-  text-align: center;
-  color: rgb(152, 152, 152);
-  font-size: x-small;
+img {
+  height: 80px;
+  float: center;
+  margin-top: 0px;
+  padding-top: 0px;
 }
