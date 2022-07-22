@@ -5,9 +5,18 @@ import "./Weather.css";
 
 export default function Weather() {
   const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+  const [weatherData, setWeatherData] = useState({});
   function handleResponse(response) {
-    setTemperature(response.data.main.temp);
+    setWeatherData({
+      date: "Saturday, June 22",
+      city: response.data.name,
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      feels: response.data.main.feels_like,
+      wind: response.data.wind.speed,
+      description: response.data.weather[0].description,
+      icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+    });
     setReady(true);
   }
 
@@ -34,28 +43,25 @@ export default function Weather() {
           </div>
         </form>
         <br />
-        <h3 className="date">Saturday, June 22</h3>
-        <h1 className="cityResult">Isla Mujeres</h1>
-        <h2 className="temperature">{temperature}</h2>
+        <h3 className="date">{weatherData.date}</h3>
+        <h1 className="cityResult">{weatherData.city}</h1>
+        <h2 className="temperature">{Math.round(weatherData.temperature)}</h2>
         <span className="unit">°C</span>
         <br />
         <div className="row">
           <div className="col-4">
             <ul>
-              <li>Humidity: 80%</li>
-              <li>Feels like: 40°</li>
+              <li>Humidity: {weatherData.humidity}</li>
+              <li>Feels like: {weatherData.feels}</li>
             </ul>
           </div>
           <div className="col-3">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="cloudy"
-            />
+            <img src={weatherData.icon} alt={weatherData.description} />
           </div>
           <div className="col-5">
             <ul>
-              <li>Wind Speed: 10m/s</li>
-              <li>Prescipitation: 15%</li>
+              <li>Wind Speed: {weatherData.wind}</li>
+              <li className="text-capitalize">{weatherData.description}</li>
             </ul>
           </div>
         </div>
