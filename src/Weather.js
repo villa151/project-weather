@@ -3,7 +3,7 @@ import axios from "axios";
 
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     setWeatherData({
@@ -68,8 +68,7 @@ export default function Weather() {
     );
   } else {
     const apiKey = "8c9e2e229b27479d87f45960af4a2ad3";
-    let city = "Guadalajara";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&units=metric&appid=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
