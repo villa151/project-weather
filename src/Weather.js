@@ -4,10 +4,10 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     setWeatherData({
+      ready: true,
       date: "Saturday, June 22",
       city: response.data.name,
       temperature: response.data.main.temp,
@@ -17,10 +17,9 @@ export default function Weather() {
       description: response.data.weather[0].description,
       icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
     });
-    setReady(true);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <form>
@@ -51,8 +50,8 @@ export default function Weather() {
         <div className="row">
           <div className="col-4">
             <ul>
-              <li>Humidity: {weatherData.humidity}</li>
-              <li>Feels like: {weatherData.feels}</li>
+              <li>Humidity: {weatherData.humidity}%</li>
+              <li>Feels like: {Math.round(weatherData.feels)}°C</li>
             </ul>
           </div>
           <div className="col-3">
@@ -60,7 +59,7 @@ export default function Weather() {
           </div>
           <div className="col-5">
             <ul>
-              <li>Wind Speed: {weatherData.wind}</li>
+              <li>Wind Speed: {Math.round(weatherData.wind)}m/s</li>
               <li className="text-capitalize">{weatherData.description}</li>
             </ul>
           </div>
