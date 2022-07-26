@@ -1,8 +1,6 @@
 import React from "react";
 
-import "./Weather.css";
-
-export default function FormattedDate(props) {
+export default function NewDate(props) {
   let days = [
     "Sunday",
     "Monday",
