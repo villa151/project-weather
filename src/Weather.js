@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import NewDate from "./NewDate";
+import WeatherInfo from "./WeatherInfo";
 
 import "./Weather.css";
 
@@ -46,31 +47,7 @@ export default function Weather(props) {
         <h3 className="date">
           <NewDate date={weatherData.date} />
         </h3>
-        <h1 className="cityResult">{weatherData.city}</h1>
-        <h2 className="temperature">{Math.round(weatherData.temperature)}</h2>
-        <span className="unit">°C</span>
-        <br />
-        <div className="row">
-          <div className="col-4">
-            <ul>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Feels like: {Math.round(weatherData.feels)}°C</li>
-            </ul>
-          </div>
-          <div className="col-3">
-            <img src={weatherData.icon} alt={weatherData.description} />
-          </div>
-          <div className="col-5">
-            <ul>
-              <li className="rightCol">
-                Wind Speed: {Math.round(weatherData.wind)}m/s
-              </li>
-              <li className="text-capitalize rightCol">
-                {weatherData.description}
-              </li>
-            </ul>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
