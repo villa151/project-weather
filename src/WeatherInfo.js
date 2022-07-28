@@ -7,7 +7,7 @@ export default function WeatherInfo(props) {
     <div>
       <h1 className="cityResult">{props.data.city}</h1>
       <Temperature celsius={props.data.temperature} />
-      <br />
+
       <div className="row">
         <div className="col-4">
           <ul>
