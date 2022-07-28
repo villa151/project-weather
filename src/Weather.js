@@ -18,7 +18,7 @@ export default function Weather(props) {
       feels: response.data.main.feels_like,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
-      icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+      icon: response.data.weather[0].icon,
     });
   }
 
