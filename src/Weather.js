@@ -65,6 +65,7 @@ export default function Weather(props) {
           <NewDate date={weatherData.date} />
         </h3>
         <WeatherInfo data={weatherData} />
+        <br />
         <Forecast />
       </div>
     );

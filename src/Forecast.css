@@ -1,3 +1,20 @@
-.Forecast {
+.forecast {
   text-align: center;
+}
+
+.forecastDay {
+  color: #91b3df;
+  font-size: 13px;
+}
+
+.forecastMax {
+  font-weight: bold;
+  color: #91b3df;
+  font-size: 13px;
+}
+
+.forecastMin {
+  font-weight: lighter;
+  color: #91b3df;
+  font-size: 13px;
 }
