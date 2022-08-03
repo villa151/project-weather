@@ -29,7 +29,7 @@ h2 {
   display: inline-flex;
   margin-top: -10px;
   padding-bottom: 10px;
-  padding-left: 105px;
+  padding-left: 125px;
 }
 
 .unit {
@@ -40,12 +40,6 @@ h2 {
   position: relative;
   top: -49px;
   line-height: 1;
-}
-
-.unit a {
-  color: #ffc108;
-  text-decoration: none;
-  font-weight: lighter;
 }
 
 ul {
